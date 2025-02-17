@@ -1,0 +1,20 @@
+<div class="profesional-card">
+  <div class="info">
+    <h2>{{ profesional.nombreUsuario }}</h2>
+    <p>Email: {{ profesional.correoUsuario }}</p>
+    <p>Teléfono: {{ profesional.telefono }}</p>
+    <h3>Especializaciones:</h3>
+    <ul>
+      <li *ngFor="let especializacion of profesional.especializaciones">
+        {{ especializacion }}
+      </li>
+    </ul>
+  </div>
+  <div class="foto">
+    <img [src]="profesional.urlFoto" alt="{{ profesional.nombreUsuario }}" />
+    <div class="botones">
+      <button>Agendar Cita</button>
+      <button>Ver Disponibilidad de Citas</button>
+    </div>
+  </div>
+</div>

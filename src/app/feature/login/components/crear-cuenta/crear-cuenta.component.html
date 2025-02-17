@@ -1,0 +1,23 @@
+<div class="crear-cuenta-container">
+  <h2>Crear Cuenta</h2>
+  <form [formGroup]="crearCuentaForm" (ngSubmit)="onCrearCuenta()">
+    <div class="form-group">
+      <label for="nombreCompleto">Nombre Completo:</label>
+      <input type="text" id="nombreCompleto" formControlName="nombreCompleto" required>
+    </div>
+    <div class="form-group">
+      <label for="correoUsuario">Correo:</label>
+      <input type="email" id="correoUsuario" formControlName="correoUsuario" required>
+    </div>
+    <div class="form-group">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" formControlName="contrasena" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" formControlName="telefono" required>
+    </div>
+    <button type="submit" [disabled]="crearCuentaForm.invalid">Crear Cuenta</button>
+    <button type="submit" (click)="redirectLogin()" >Iniciar Sesion</button>
+  </form>
+</div>

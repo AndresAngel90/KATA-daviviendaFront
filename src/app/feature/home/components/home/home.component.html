@@ -1,0 +1,10 @@
+<div id="productos">
+  <app-profesional
+    *ngFor="let item of listaProfesionales | async"
+    [profesional]="item"
+  ></app-profesional>
+
+  <p *ngIf="(listaProfesionalesVacia | async) === false">
+    No se encontraron profesionales
+  </p>
+</div>
