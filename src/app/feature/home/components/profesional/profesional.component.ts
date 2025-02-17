@@ -8,4 +8,14 @@ import { Profesional } from '@home/shared/model/profesional';
 })
 export class ProfesionalComponent {
   @Input() profesional: Profesional;
+
+  mostrarModal = false;
+
+  abrirModal() {
+    this.mostrarModal = true;
+  }
+
+  cerrarModal() {
+    this.mostrarModal = false;
+  }
 }
